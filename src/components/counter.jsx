@@ -3,9 +3,21 @@ class Counter extends Component {
   state = {
     count: 0,
   };
-  handleIncrement() {
-    console.log('InCrement');
-  }
+  // constructor() {
+  //   super();
+  //   this.handleIncrement = this.handleIncrement.bind(this);
+  // }
+  // handleIncrement() {
+  //   console.log('InCrement', this);
+  // obj.method();
+  // function(); this by default return window object but if stict mode enable this return undefined
+
+  // }
+
+  handleIncrement = () => {
+    console.log('InCrement', this);
+  };
+
   render() {
     return (
       <div>
