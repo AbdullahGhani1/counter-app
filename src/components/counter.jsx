@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 class Counter extends Component {
+  // local state and call only once when counter component initialte
   state = {
     value: this.props.counter.value,
   };
@@ -10,6 +11,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        button.btn
         <span className={this.getBadgeclasses()}>{this.formatCount()}</span>
         <button
           onClick={this.handleIncrement}
