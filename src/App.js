@@ -12,6 +12,22 @@ class App extends Component {
       { id: 4, value: 0 },
     ],
   };
+  /*
+  constructoris call only ones and is the right 
+  place where iniitialize properties
+  */
+  constructor() {
+    super();
+    console.log('App - Constructor');
+  }
+  /* 
+  This method is called after component is render 
+  into DOM and is the perfect place to make Ajex calls
+  to get Data from the server
+   */
+  componentDidMount() {
+    console.log('App - Mounted');
+  }
   handleIncrement = (counter) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
@@ -32,6 +48,12 @@ class App extends Component {
   };
 
   render() {
+    /*
+    when compponent is render all is children 
+      components render recursively
+    */
+    console.log('App - Render');
+
     return (
       <React.Fragment>
         <NavBar
