@@ -1,5 +1,20 @@
 import React, { Component } from 'react';
 class Counter extends Component {
+  /*
+  This method is called after component is updated
+  ehic means we have bew state or props so we can
+  compare this new state with the old state or 
+  this new props with the old props and if there is 
+  a change.we can make AJax request to get the new data 
+  from serer */
+  componentDidUpdate(prevProps, prevState) {
+    console.log('App - componentDidUpdate');
+    console.log('previouProps', prevProps);
+    console.log('previousState', prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+    }
+  }
+  componentWillUnmount() {}
   render() {
     console.log('Counter - Render');
     return (
